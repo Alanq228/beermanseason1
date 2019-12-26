@@ -1,0 +1,37 @@
+'use strict';
+
+function initEmpathyX() {
+  var w = window.innerWidth
+  var scope = w > 960 ? 'desktop' : w < 576 ? 'mobile' : 'tablet'; // Default scope
+
+  // if (WURFL) {
+  //   if (WURFL.is_mobile && WURFL.form_factor === 'Smartphone') scope = 'mobile';
+  //   if (WURFL.is_mobile && WURFL.form_factor === 'Tablet') scope = 'tablet';
+  // }
+
+  EmpathyX.init({
+    instance: 'cdl',
+    lang: 'es',
+    scope: scope,
+    currency: 'EUR',
+    consent: true,
+    eventCallbacks: {
+      click: function click(data) {
+        console.log('[CLICK]', data);
+      },
+      query: function(data) {
+        if (data.page == 1 && data.origin != 'linked') {
+          ga('create','UA-64299025-1','auto');
+          ga('set', 'page', document.location.pathname + document.location.search);
+          ga('send', 'pageview');
+        }
+      },
+      add2cart: function(data) {
+        if (data.context == 'SRP') {
+          window.$nuxt.$store.dispatch('checkout/addProduct', { cantidad: 1, idProducto: data.productId });
+        }
+      }      
+    }
+
+  });
+}

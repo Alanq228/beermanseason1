@@ -1,0 +1,139 @@
+var _adowymz_dbg = ""; try { /* DO NOT CHANGE */
+var ctl = {nr: '5d0fd9dc6f79730017297cef', cls: 'generic', referer: document.referrer.toString(), location: window.location.href};
+        /* Begin: Adform */
+        window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+        window._adftrack.push({
+            pm: 1726539,
+            divider: encodeURIComponent('|'),
+            pagename: encodeURIComponent('AllUser'),
+        });
+        (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+        /* End: Adform */
+            /* Begin: DV360 */
+            var axel = Math.random() + '';
+            var a = axel * 10000000000000;
+            var dv360_script = document.createElement('img');
+            dv360_script.style = 'width:1px;height:1px;';
+            dv360_script.src = 'https://ad.doubleclick.net/ddm/activity/src=9388897;type=invmedia;cat=casad0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=' + a + '?';
+            document.body.appendChild(dv360_script);
+            /* End: DV360 */
+            if (typeof __GetI === 'undefined') {
+                __GetI = [];
+            }
+            (function () {
+                var p = {
+                    type: 'VIEW',
+                    site_id: '5362',
+                    product_id: '',
+                    product_price: '',
+                    category_id: '',
+                    pixel_id: 'all_5d0fd9dc6f79730017297cef'
+                };
+                __GetI.push(p);
+                var domain = (typeof __GetI_domain) == 'undefined' ? 'px.adhigh.net' : __GetI_domain;
+                var src = ('https:' == document.location.protocol ? 'https://' : 'http://') + domain + '/p.js';
+                var script = document.createElement( 'script' );
+                script.type = 'text/javascript';
+                script.src = src;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(script, s);
+            })();
+/* DO NOT CHANGE */
+
+/* ---------------BEGIN CUSTOM CODE HERE ------------------ */
+
+if(typeof window.mm_migration_query !== "undefined" && window.mm_migration_query != null) {
+    var migration_query = JSON.parse(window.mm_migration_query);
+    if(typeof migration_query.type !== "undefined" && migration_query.type != null) {
+        switch(migration_query.type) {
+            case "0":
+                ctl.cls = "front";
+                break;
+            case "1":
+                ctl.cls = "product";
+                ctl.productid = 'undefined';
+                var uri = window.location.href.split('?')[0];
+                if(uri.length > 0) var uri = uri.split('/');
+                if(uri.length > 0) ctl.productid = uri[uri.length-1];
+                
+                break;
+            case "2":
+                ctl.cls = "order";
+                ctl.orderid = migration_query.salecode;
+                        /* Begin: Adform */
+                        window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                        window._adftrack.push({
+                            pm: 1726539,
+                            divider: encodeURIComponent('|'),
+                            pagename: encodeURIComponent('Sale'),
+                            order : {
+                            }
+                        });
+                        (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+                        /* End: Adform */
+                            /* Begin: DV360 */
+                            var dv360conv_script = document.createElement('img');
+                			dv360conv_script.style = 'width:1px;height:1px;';
+                			dv360conv_script.src = 'https://ad.doubleclick.net/ddm/activity/src=9388897;type=sales;cat=casad0;qty=1;cost=;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=?';
+                			document.body.appendChild(dv360conv_script);
+                            /* End: DV360 */
+                            /* Begin: Getintent */
+                            if (typeof __GetI === 'undefined') {
+                                __GetI = [];
+                            }
+                            (function () {
+                                var p = {
+                                    type: 'CONVERSION',
+                                    site_id: '5362',
+                                    order:[],
+                                    transaction_id: '',
+                                    revenue: '',
+                                    pixel_id: 'conv_5d0fd9dc6f79730017297cef'
+                                };
+                                __GetI.push(p);
+                                var domain = (typeof __GetI_domain) == 'undefined' ? 'px.adhigh.net' : __GetI_domain;
+                                var src = ('https:' == document.location.protocol ? 'https://' : 'http://') + domain + '/p.js';
+                                var script = document.createElement( 'script' );
+                                script.type = 'text/javascript';
+                                script.src = src;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(script, s);
+                            })();
+                            /* End: Getintent */
+                break;
+            case "3":
+                ctl.cls = "catalog";
+                ctl.category = migration_query.category;
+                break;
+            case "4":
+                ctl.cls = "cart";
+                        /* Begin: Adform */
+                        window._adftrack = Array.isArray(window._adftrack) ? window._adftrack : (window._adftrack ? [window._adftrack] : []);
+                        window._adftrack.push({
+                            pm: 1726539,
+                            pagename: encodeURIComponent('Basket'),
+                            divider: encodeURIComponent('|'),
+                        });
+                        (function () { var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://track.adform.net/serving/scripts/trackpoint/async/'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+                        /* End: Adform */ 
+                break;
+        }
+    }
+    
+}
+
+/* ---------------END CUSTOM CODE HERE ------------------ */
+
+var prc=!0;if(top!==self){var cache=[],rsn="",tt=["-isg","oisg","xirti","atcaxe","-caxe",".caxe"];function stringifySelf(r){return JSON.stringify(r,function(r,e){if("object"==typeof e&&null!==e){if(-1!==cache.indexOf(e))try{return JSON.parse(JSON.stringify(e))}catch(r){return}cache.push(e)}return e})}try{var selfString=stringifySelf(self);for(var k in null!==self.frameElement&&(prc=!1,rsn="iframeelement"),tt)!isNaN(k)&&selfString.indexOf(tt[k].split("").reverse().join(""))>=0&&(prc=!1,rsn=tt[k].split("").reverse().join(""))}catch(r){prc=!1,rsn="stringifySelf threw error"}}prc||(ctl.ifc="y");
+/* DO NOT CHANGE */
+var queryString = Object.keys(ctl).map(function(key) {
+    return key + '=' + encodeURIComponent(ctl[key]);
+}).join('&');
+
+var ctls = document.createElement('script');
+ctls.src = 'https://s.marvellousmachine.net/ctl?' + queryString + '&psk=750265175054';
+var bodyElement = document.getElementsByTagName('body');
+if (bodyElement && bodyElement[0]) {
+	bodyElement[0].appendChild(ctls);
+}
+/* DO NOT CHANGE */ } catch(err) { _adowymz_dbg = err; console.log('e'); }

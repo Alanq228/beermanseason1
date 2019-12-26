@@ -1,0 +1,6 @@
+window.mm_migration_query = '{"type":"1","cid":"1409","language":"EUR","productid":"2001698","category":"Libros/Literatura/En otros idiomas","price":"undefined","curr":"EUR","extref":"https://www.casadellibro.com/libro-la-parrucca-di-mozart/9788806200541/2001698"}';
+var migration_script = document.createElement('script');
+migration_script.async = true;
+migration_script.type = 'text/javascript';
+migration_script.src = 'https://s.marvellousmachine.net';
+document.body.appendChild(migration_script);
